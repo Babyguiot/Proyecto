@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  
+   
+}
+
+.container {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    
+   
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay h1 {
+    font-size: 4vw;
+}
+
+.overlay p {
+    font-size: 2vw;
+}
+
+.overlay input[type="email"] {
+    padding: 8px;
+    font-size: 1vw;
+    border: none;
+    border-radius: 15px;
+    width: 60%;
+}
+
+.overlay button {
+    padding: 8px 16px;
+    font-size: 1vw;
+    background-color: #d61500;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
