@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIENDA BONANZA</title>
+    <link rel="stylesheet" href="estilos-global.css" />
+
+    <link rel="icon" href="img/logo.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+            <a class="compañia" href="">Nosotros</a>
+            <a class="compañia" href="">Preguntas Frecuentes</a>
+    </header>
+    <nav>
+        <section id="menu">
+        <ul>
+            <li><a class="menu2" href="">Inicio</a></li>
+            <div class="dropdown">
+              <button class="mainmenubtn">Productos</button>
+              <div class="dropdown-content">
+                <a href="">Frutas y verduras</a>
+                <a href="#">Dulceria</a>
+                <a href="">Bebidas</a>
+                <a href="">Lacteos y refrigerados</a>
+                <a href="">Alimentos</a>
+                <a href="">Cuidado personal</a>
+                <a href="">Productos de limpieza</a>
+                <a href="">Mascotas</a>
+              </div>
+            </div>
+        </ul>
+        </section>
+    </nav>
+
+
+
+        <!-- Productos-->
+        <div class="filter-buttons-container">
+            <button id="Todas" class="filter-button">Todas</button>
+            <button id="Gaseosas" class="filter-button">Gaseosas</button>
+            <button id="Licores" class="filter-button">Licores</button>
+            <button id="Aguas" class="filter-button">Agua</button>
+        </div>
+        <div class="card-products-container">
+            <div id="shopContent"></div>
+        </div>
+
+    
+    <!--PIE DE PAGINA-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-links">
+            <a href=""><h4>Inicio</h4></a>
+            <a href=""><h4>categorias</h4></a>
+            <a href=""><h4>Ubicacion</h4></a>
+            <a href=""><h4>¿Necesitas ayuda?</h4></a>
+          </div>
+          <div class="footer-links">
+            <h4>Siguenos</h4>
+            <div class="social-link">
+              <a
+                class="facebook"
+                href=""
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="instagram"
+                href=""
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scriptBebidas.js"></script>
+  </body>
+</html>

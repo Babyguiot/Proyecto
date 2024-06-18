@@ -1,0 +1,72 @@
+
+/* PRODUCTOS GUANTES*/
+.nombreP{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    font-size: 25px;
+  }
+  h1{
+    text-align: center;
+  }
+  .search-container {
+    margin: 0vh auto;
+    max-width: 400px;
+    padding: 20px;
+  }
+  input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #646363;
+    border-radius: 8px;
+    outline: none;
+  }
+  .card-products-container{
+    margin: 10vh auto;
+    text-align: center;
+  }
+  .card-products{
+    display: inline-block;
+    text-align: center;
+    margin: 0 30px;
+  }
+  .card-products img{
+    width: 300px;
+    height: 250px;
+    border: 3px solid black ;
+  }
+  .card-products h3{
+    margin-top: -10px;
+  }
+  .card-products button{
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: #000000;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-size: 15px;
+  }
+  .filter-buttons-container{
+    text-align: center;
+  }
+  .filter-button{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 10px;
+  }
+  
+  /*Hover effect*/
+  .filter-button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
