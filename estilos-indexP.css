@@ -1,0 +1,59 @@
+/*Primera img*/
+.portada img{
+    height: 400px;
+    width: 100%;
+}
+.portada .logo{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 46%;
+    top: 18%;
+}
+.portada p{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 40%;
+    font-family: Poppins Semi Bold;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Categorias*/
+.titulo1{
+    background-color: #5BC1F3;
+    height: 60px;
+    font-size: 40px;
+    margin-top: -3px;
+    align-content: center;
+    text-align: center;
+    font-family:Poppins Semi Bold ;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+.categorias h3{
+    text-align: center;
+}
+.categorias a{
+    color: black;
+}
+.categorias img{
+    height: 250px;
+    width: 200px;
+}
+.cuadro{
+    background-color: #FEEFD2;
+    border-radius: 80%;
+    margin-bottom: 27%;
+    width: 200px;
+    height: 200px;
+}
+/*Ofertas*/

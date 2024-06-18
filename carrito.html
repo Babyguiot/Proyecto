@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito de Compras</title>
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="carrito.css">
+
+</head>
+<body>
+   <!--HEADER DE LA PAGINA-->
+  <a href="principal.html" class="logo">
+    <img src="img/tienda.ico" alt="Logo" />
+    <h1 class="nombre-empresa">Tienda Bonanza</h1>
+  </a>
+  <br>
+  <br>
+
+<center><h2>NUESTRO CARRITO DE COMPRAS </h2></center>
+<br>
+<br>
+
+<img src="https://img.icons8.com/?size=100&id=7ykGA0wEPoEb&format=png&color=000000" class= "carrito" alt="Descripción de la imagen">
+
+<div id="carrito">
+  <div id="productos">
+    <!-- Aquí se agregarán los productos -->
+  </div>
+ <center><div>
+  <label for="nombre">Nombre del Producto:</label>
+  <input type="text" id="nombre">
+  <label for="precio">Precio:</label>
+  <input type="number" id="precio" min="0" step="0.01">
+  <button onclick="agregarProducto()">Agregar Producto</button>
+</div>
+<div id="total">
+
+  <span>Total:</span>
+  <span id="total-amount">$0.00</span>
+</div></center> 
+</div>
+
+<script>
+  window.onload = function() {
+    actualizarTotal();
+  };
+
+  function agregarProducto() {
+    var nombreInput = document.getElementById('nombre');
+    var precioInput = document.getElementById('precio');
+
+    var nombre = nombreInput.value.trim();
+    var precio = parseFloat(precioInput.value);
+
+    if (nombre === "" || isNaN(precio) || precio <= 0) {
+      alert("Por favor, ingresa un nombre y un precio válido.");
+      return;
+    }
+
+    var productosDiv = document.getElementById('productos');
+    var nuevoProducto = document.createElement('div');
+    nuevoProducto.classList.add('producto');
+    nuevoProducto.innerHTML = `
+      <span>${nombre}</span>
+      <span class="precio">$${precio.toFixed(2)}</span>
+      <input type="number" class="cantidad" value="1" min="1" onchange="actualizarSubtotal(this)">
+      <span class="subtotal">$${precio.toFixed(2)}</span>
+    `;
+    productosDiv.appendChild(nuevoProducto);
+
+    nombreInput.value = "";
+    precioInput.value = "";
+    actualizarTotal();
+  }
+
+  function actualizarSubtotal(input) {
+    var producto = input.parentElement;
+    var precio = parseFloat(producto.getElementsByClassName('precio')[0].innerText.replace('$', ''));
+    var cantidad = parseInt(input.value);
+    var subtotal = precio * cantidad;
+    producto.getElementsByClassName('subtotal')[0].innerText = '$' + subtotal.toFixed(2);
+    actualizarTotal();
+  }
+ 
+  function actualizarTotal() {
+    var subtotales = document.getElementsByClassName('subtotal');
+    var total = 0;
+    for (var i = 0; i < subtotales.length; i++) {
+      total += parseFloat(subtotales[i].innerText.replace('$', ''));
+    }
+    document.getElementById('total-amount').innerText = '$' + total.toFixed(2);
+  }
+</script>
+
+</body>
+
+ <!--PIE DE PAGINA-->
+ <footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <div class="footer-links">
+        <h4>SOBRE NOSOTROS</h4>
+        <ul>
+          <li>
+            <a href="">¿Quienes somos?</a>
+          </li>
+          <li>
+            <a href="">Preguntas frecuentes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>SIGUENOS EN NUESTRAS REDES SOCIALES</h4>
+        <div class="social-link">
+          <a
+            class="facebook"
+            href=""
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="instagram"
+            href=""
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+          class="whatsapp"
+          href=""
+          target="_blank"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a
+        class="tiktok"
+        href=""
+        target="_blank"
+        ><i class="fab fa-tiktok"></i
+      ></a>
+        </div>
+        
+      </div>
+      
+    </div>
+    <p class="terminos">&copy; 2024 Terminos y condiciones</p>
+  </div>
+</footer>
+</body>
+</html>
+</html>
